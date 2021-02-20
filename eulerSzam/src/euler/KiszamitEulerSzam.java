@@ -3,7 +3,8 @@ package euler;
 public class KiszamitEulerSzam {
     public static void main(String[] args) {
         double e = 0.0;
-        for(int i = 0; i <= 11; i++) e += 1.0 / factorial(i);
+        for(int i = 0; i <= 11; i++) 
+            e += 1.0 / factorial(i);
         System.out.println(e);
     }
 
