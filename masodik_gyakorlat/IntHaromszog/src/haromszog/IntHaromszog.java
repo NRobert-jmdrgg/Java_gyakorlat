@@ -2,11 +2,12 @@ package haromszog;
 
 import java.util.Scanner;
 
+
 public class IntHaromszog {
     public static void main(String[] args) {
         int a = beker();
         szamHaromszog(a);
-    }   
+    }  
     
     private static int beker() {
         Scanner s = new Scanner(System.in);
