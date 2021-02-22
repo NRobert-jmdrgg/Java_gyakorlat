@@ -50,6 +50,6 @@ public class Kalkulator2 {
                 return;
         }
 
-        System.out.println(eredmeny);
+        System.out.println("eredmeny: " + eredmeny);
     }
 }
