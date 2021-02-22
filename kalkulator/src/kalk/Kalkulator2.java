@@ -39,6 +39,10 @@ public class Kalkulator2 {
                 eredmeny = operandus1 * operandus2;
                 break;
             case '/':
+                if(operandus2 == 0) {
+                    System.out.println("Nem lehet 0 val osztani");
+                    return ;
+                } 
                 eredmeny = (double)operandus1 / operandus2;
                 break;
             default :
