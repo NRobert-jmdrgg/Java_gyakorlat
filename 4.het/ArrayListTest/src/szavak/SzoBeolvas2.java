@@ -10,11 +10,13 @@ public class SzoBeolvas2 {
         ArrayList<String> szavak = new ArrayList<>();
         System.out.println("Add meg a szavakat: (üres szora leall a program)");
 
-        String szo = input.nextLine();
+        String szo;
         do {
-            szavak.add(szo);
             szo = input.nextLine();
+            szavak.add(szo);
         } while(!szo.isEmpty());
+        szavak.remove(szavak.size() - 1);
+        
 
         return szavak;
     }
