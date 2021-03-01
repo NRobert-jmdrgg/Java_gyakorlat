@@ -1,6 +1,8 @@
 package randomness;
 
 import java.util.Random;
+import java.util.Arrays;
+
 
 public class RandomTomb {
 
@@ -56,6 +58,17 @@ public class RandomTomb {
 
     }
 
+    static void rendezettKiir(int[] arr, double[] arr2) {
+        Arrays.sort(arr);
+        Arrays.sort(arr2);
+        for(int i : arr) 
+            System.out.println(i);
+            
+        for(double i : arr2)
+            System.out.println(i);
+    
+    }
+
     public static void main(String[] args) {
         final int meret = 10;
         final int[] arr = tombGeneral(meret);
@@ -65,7 +78,5 @@ public class RandomTomb {
 
         final double[] arr2 = tombGeneralDouble(meret);
         System.out.println("mertani atlag: " + mertaniAtlag(arr2));
-        
-
     }
 }
