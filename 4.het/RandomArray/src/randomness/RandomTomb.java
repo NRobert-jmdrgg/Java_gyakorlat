@@ -69,6 +69,14 @@ public class RandomTomb {
     
     }
 
+    static int binarisKereses(final int[] arr, int key) {
+        return Arrays.binarySearch(arr, key);
+    }
+
+    static boolean azonossagTomb(final int[] arr1, final int arr2[]) {
+        return Arrays.equals(arr1, arr2);
+    }
+
     public static void main(String[] args) {
         final int meret = 10;
         final int[] arr = tombGeneral(meret);
