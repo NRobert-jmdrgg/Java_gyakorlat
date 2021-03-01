@@ -1,7 +1,7 @@
 package muka;
 
 public class Alkalmazott {
-    private String name;
+    private final String name;
     private int salary;
 
     //konstruktorok overloadinggal
@@ -16,5 +16,27 @@ public class Alkalmazott {
         this.salary = mySalary;
     }
 
-    
+    //setter
+    public void setSalary(int s) {
+        this.salary = s;
+    }
+
+    public void increaseSalary(int inc) {
+        this.salary += inc;
+    }
+
+    //getter
+    public String getName() {
+        return this.name;
+    }
+
+    public int getSalary() {
+        return this.salary;
+    }
+
+    public static String getAlkalmazott(Alkalmazott a) {
+        return a.name + Integer.toString(a.salary);
+    }
+
+
 }
