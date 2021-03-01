@@ -13,6 +13,7 @@ public class SzoBeolvas {
     static ArrayList<String> szavakatEltarol(Scanner in) {
         ArrayList<String> szavak = new ArrayList<>();
         String szo;
+        //A végére eltárol egy " "-t is
         do {
             szo = sorBeolvas(in);
             szavak.add(szo);    
