@@ -38,11 +38,34 @@ public class RandomTomb {
         }
         return negyzetCount;
     }
+
+    static double[] tombGeneralDouble(final int meret) {
+        double[] arr = new double[meret];
+        for(int i = 0; i < meret; i++) {
+            arr[i] = (r.nextDouble() * (50 - 1) + 1);
+        }
+        return arr;
+    }
+
+    static double mertaniAtlag(final double[] arr) {
+        double pr = 1;
+        for(double i : arr) {
+            pr *= i;
+        }
+        return Math.pow(pr, 1.0 / arr.length);
+
+    }
+
     public static void main(String[] args) {
         final int meret = 10;
         final int[] arr = tombGeneral(meret);
         tombKiir(arr);
         System.out.println("ln szám: " + legnagyobbParos(arr));
         System.out.println("negyzetszám száma: " + negyzetSzamok(arr));
+
+        final double[] arr2 = tombGeneralDouble(meret);
+        System.out.println("mertani atlag: " + mertaniAtlag(arr2));
+        
+
     }
 }
