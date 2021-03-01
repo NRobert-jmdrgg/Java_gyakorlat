@@ -4,6 +4,8 @@ public class Alkalmazott {
     private final String name;
     private int salary;
 
+    private final double adokulcs = 16.0;
+
     //konstruktorok overloadinggal
 
     public Alkalmazott(String myName) {
@@ -34,9 +36,24 @@ public class Alkalmazott {
         return this.salary;
     }
 
-    public static String getAlkalmazott(Alkalmazott a) {
+    //metodusok
+    public boolean salaryBounds(int u, int l) {
+        return (this.salary < u && this.salary > l);
+    }
+
+    public double tax() {
+        return this.salary * (adokulcs / 100);
+    }
+
+    public boolean salaryGreaterThan(int m) {
+        return (this.salary > m);
+    }
+    
+    public static String alkalmazottToString(Alkalmazott a) {
         return a.name + Integer.toString(a.salary);
     }
+
+    
 
 
 }
