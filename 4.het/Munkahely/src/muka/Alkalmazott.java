@@ -4,7 +4,8 @@ public class Alkalmazott {
     private final String name;
     private int salary;
 
-    private final double adokulcs = 16.0;
+    //konstans csak egyszer foglalunk neki helyet
+    private static final double ADOKULCS = 16.0;
 
     //konstruktorok overloadinggal
 
@@ -42,13 +43,13 @@ public class Alkalmazott {
     }
 
     public double tax() {
-        return this.salary * (adokulcs / 100);
+        return this.salary * (ADOKULCS / 100);
     }
 
     public boolean salaryGreaterThan(int m) {
         return (this.salary > m);
     }
-    
+
     public static String alkalmazottToString(Alkalmazott a) {
         return a.name + Integer.toString(a.salary);
     }
