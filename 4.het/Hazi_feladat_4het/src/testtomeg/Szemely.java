@@ -45,7 +45,7 @@ public class Szemely {
 
     @Override
     public String toString() {
-        return "nev: " + this.nev + "suly" + this.suly + "magassag: " + this.magassag + "tti: " + this.testtomegIndex() + "alak: " + this.alak();
+        return "nev: " + this.nev + " suly " + this.suly + " magassag: " + this.magassag + " tti: " + this.testtomegIndex() + " alak: " + this.alak();
     }
     
     private double testtomegIndex() {
