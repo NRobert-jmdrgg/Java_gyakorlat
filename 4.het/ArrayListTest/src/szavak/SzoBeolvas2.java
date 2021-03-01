@@ -22,6 +22,7 @@ public class SzoBeolvas2 {
     }
 
     static void kiir(ArrayList<String> arr) {
+        System.out.print("Kiiras: ");
         for(String s : arr) 
             System.out.println(s);
     }
