@@ -38,23 +38,20 @@ public class Alkalmazott {
     }
 
     //metodusok
-    public boolean salaryBounds(int u, int l) {
-        return (this.salary < u && this.salary > l);
+    public boolean salaryBounds(final int u,final int l) {
+        return (this.salary < u) && (this.salary > l);
     }
 
     public double tax() {
         return this.salary * (ADOKULCS / 100);
     }
 
-    public boolean salaryGreaterThan(int m) {
+    public boolean salaryGreaterThan(final int m) {
         return (this.salary > m);
     }
 
     public static String alkalmazottToString(Alkalmazott a) {
-        return a.name + Integer.toString(a.salary);
+        return (a.getName() + " " + Integer.toString(a.getSalary()));
     }
-
-    
-
 
 }
