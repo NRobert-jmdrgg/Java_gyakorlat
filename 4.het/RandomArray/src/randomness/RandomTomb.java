@@ -73,7 +73,7 @@ public class RandomTomb {
         return Arrays.binarySearch(arr, key);
     }
 
-    static boolean azonossagTomb(final int[] arr1, final int arr2[]) {
+    static boolean azonossagTomb(final int[] arr1, final int[] arr2) {
         return Arrays.equals(arr1, arr2);
     }
 
