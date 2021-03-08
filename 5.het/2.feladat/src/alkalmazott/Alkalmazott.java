@@ -8,7 +8,7 @@ public class Alkalmazott {
         salary += salary * (percentage / 100);
     }
     @Override
-    String toString() {
+    public String toString() {
         return name + ": " + salary; 
     }
 }
