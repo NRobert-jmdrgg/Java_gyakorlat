@@ -1,9 +1,12 @@
 package sikidom;
 
+
 public class Teglalap {
     private int sideA;
     private int sideB;
     
+    
+
     public Teglalap(int a, int b) {
         this.sideA = a;
         this.sideB = b;
@@ -44,16 +47,16 @@ public class Teglalap {
         this.sideB = a;
     }
 
-    public Boolean biggerThan(Teglalap t) {
+    public boolean biggerThan(Teglalap t) {
         return (this.terulet() > t.terulet());
     }
 
-    public Boolean isSameSizeAs(Teglalap t) {
-        return ((t.sideA == this.sideA) && (t.sideB == this.sideB));
-    }
+    
+    
+    
 
 
-
+  
     
 
 }
