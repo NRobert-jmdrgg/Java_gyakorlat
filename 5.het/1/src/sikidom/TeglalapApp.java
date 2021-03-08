@@ -1,7 +1,12 @@
 package sikidom;
 
+import java.util.Random;
+
 public class TeglalapApp {
     public static void main(String[] args) {
+        
+       
+        
         Teglalap a = new Teglalap(5, 5);
         Teglalap b = new Teglalap(5, 7);
         Teglalap c = a;
@@ -18,6 +23,7 @@ public class TeglalapApp {
 
         System.out.println(a.isSameSizeAs(b));
         System.out.println(a.isSameSizeAs(c));
-
     }
+
+    
 }
