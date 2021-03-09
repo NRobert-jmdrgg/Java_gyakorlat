@@ -50,8 +50,11 @@ public class Alkalmazott {
         return (this.salary > m);
     }
 
-    public static String alkalmazottToString(Alkalmazott a) {
-        return (a.getName() + " " + Integer.toString(a.getSalary()));
+    @Override
+    public String toString() {
+        return "Alkalmazott [name=" + name + ", salary=" + salary + "]";
     }
+    
+    
 
 }
