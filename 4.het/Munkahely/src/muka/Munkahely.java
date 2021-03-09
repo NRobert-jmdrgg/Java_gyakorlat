@@ -16,9 +16,12 @@ public class Munkahely {
     private static int 
     intervallumbaEsoFizetesekSzama(final int upper,final int lower, final Alkalmazott[] alk) {
         int count = 0;
-        for(Alkalmazott a : alk) 
-            if(a.salaryBounds(upper, lower)) 
+        for(Alkalmazott a : alk) {
+            if(a.salaryBounds(upper, lower)) {
                 count++;
+            }
+        }
+            
         return count;
     }
 
@@ -40,8 +43,9 @@ public class Munkahely {
     }
 
     private static void kiirAlkalmazottak(final Alkalmazott[] alk) {
-        for(Alkalmazott a : alk)
+        for(Alkalmazott a : alk) {
             System.out.println(a.toString());
+        }
     }
 
     public static void main(String[] args) {
@@ -53,7 +57,7 @@ public class Munkahely {
         for(int i = 0; i < meret; i++) {
             alkalmazottak[i] = new Alkalmazott(nevek[i], r.nextInt(1000000 - 470000) + 470000);
         }
-
+        
         kiirAlkalmazottak(alkalmazottak);
 
         legnagyobbFizetesselRendelkezo(alkalmazottak);
