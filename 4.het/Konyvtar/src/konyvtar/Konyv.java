@@ -1,10 +1,14 @@
 package konyvtar;
 
+import java.time.LocalDate;
+
 public class Konyv {
     private String cim;
     private String szerzo;
     private int ev;
     private int ar;
+
+    private LocalDate currentDate = LocalDate.now();
 
     public Konyv(final String cim, final String szerzo, final int ev,final int ar) {
         this.cim = cim;
@@ -12,19 +16,14 @@ public class Konyv {
         this.ev = ev;
         this.ar = ar;
     }
-    public Konyv(final String cim, final String szerzo, final int ev) {
+    
+    public Konyv(String cim, String szerzo) {
         this.cim = cim;
         this.szerzo = szerzo;
-        this.ev = ev;
-        this.ar = 1000;
-    }
+        this.ar = 2500;
+        this.ev = currentDate.getYear();
+    }    
 
-    public Konyv(final String cim, final String szerzo) {
-        this.cim = cim;
-        this.szerzo = szerzo;
-        this.ev = 2000;
-        this.ar = 1000;
-    }
     @Override
     public String toString() {
         return this.cim  + " " + this.szerzo + " " + Integer.toString(this.ev) + " " + Integer.toString(this.ar);
@@ -65,4 +64,5 @@ public class Konyv {
     public int getAr() {
         return this.ar;
     }
+
 }
