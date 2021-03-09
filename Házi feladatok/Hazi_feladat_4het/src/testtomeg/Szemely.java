@@ -53,8 +53,13 @@ public class Szemely {
     }
 
     private String alak() {
-        if(this.testtomegIndex() < 18.5) return "sovany";
-        else if(this.testtomegIndex() > 25) return "kover";
-        else return "normal";
+        if(this.testtomegIndex() < 18.5) {
+            return "sovany";
+        } else if(this.testtomegIndex() > 25) {
+            return "kover";
+        } else {
+            return "normal";
+        }
+        
     }
 }
