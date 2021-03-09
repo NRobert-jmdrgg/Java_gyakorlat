@@ -41,7 +41,7 @@ public class Munkahely {
 
     private static void kiirAlkalmazottak(final Alkalmazott[] alk) {
         for(Alkalmazott a : alk)
-            System.out.println(Alkalmazott.alkalmazottToString(a));
+            System.out.println(a.toString());
     }
 
     public static void main(String[] args) {
