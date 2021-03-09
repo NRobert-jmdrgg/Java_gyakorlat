@@ -11,7 +11,7 @@ public class Alkalmazott {
 
     public Alkalmazott(String myName) {
         this.name = myName;
-        this.salary = 47000;
+        this.salary = 250000;
     }
 
     public Alkalmazott(String myName, int mySalary) {
