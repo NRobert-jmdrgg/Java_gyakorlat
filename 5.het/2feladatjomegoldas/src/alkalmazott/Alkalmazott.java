@@ -23,7 +23,7 @@ public class Alkalmazott {
     }
 
 
-    //fuggvenyek es getter/setterek
+    //fuggvenyek es getter/setterek (objektumokhoz)
     public void increaseSalary(double percentage) {
         this.salary += salary * (percentage/100);
     }
