@@ -24,11 +24,15 @@ public class Alkalmazott {
     public Alkalmazott(String nev, LocalDate szuletesiDatum) {
         this.nev = nev;
         this.szuletesiDatum = szuletesiDatum;
-        this.fizetes = this.szuletesiDatum.getYear();
+        this.fizetes = (currentYear - this.szuletesiDatum.getYear()) * 10000;
     }
 
     public int evekNyugdijig() {
-        return NYUGDIJKORHATAR - this.eletkor;
+        if (NYUGDIJKORHATAR - (currentYear - this.szuletesiDatum.getYear()) <= 0) {
+            return 0;
+        } else {
+            return currentYear - this.szuletesiDatum.getYear();
+        }
     }
 
     @Override
