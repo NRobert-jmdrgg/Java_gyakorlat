@@ -79,7 +79,7 @@ public class AlkalmazottApp {
                     minindex = j;
                 }
             }
-
+            
             if (minindex != i) {
                 Alkalmazott temp = alk[i];
                 alk[i] = alk[minindex];

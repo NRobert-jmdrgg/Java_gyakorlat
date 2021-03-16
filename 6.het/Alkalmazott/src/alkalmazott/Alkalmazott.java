@@ -16,11 +16,11 @@ public class Alkalmazott {
 
     private static String[] monthNames = {
         " ",
-        "január",
-        "február",
-        "március",
-        "április",
-        "május",
+        "januar",
+        "februar",
+        "marcius",
+        "aprilis",
+        "majus",
         "junius",
         "julius",
         "augusztus",
