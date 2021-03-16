@@ -37,8 +37,9 @@ public class Alkalmazott {
 
     @Override
     public String toString() {
-        return "alkalmazott [eletkor=" + eletkor + ", fizetes=" + fizetes + ", nev=" + nev + "]";
+        return "Alkalmazott [fizetes=" + fizetes + ", nev=" + nev + ", szuletesiDatum=" + szuletesiDatum + "]";
     }
+    
 
     //osztaly methodusok
     public static Alkalmazott kevesebbIdoNyugdijig(Alkalmazott a, Alkalmazott b) {
@@ -52,6 +53,8 @@ public class Alkalmazott {
     public static void setNyugdijkorhatar(int korhatar) {
         NYUGDIJKORHATAR = korhatar;
     }
+
+    
 
     
 
