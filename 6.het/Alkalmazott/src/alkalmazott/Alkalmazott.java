@@ -5,27 +5,30 @@ import java.time.LocalDate;
 public class Alkalmazott {
     //objektum adattagok
     private String nev;
-    private int szuletesiDatum;
+    private LocalDate szuletesiDatum;
     private int fizetes;
 
     //osztaly adattagok
-    private static int nyugdijKorhatar = 65;
+    private static final int NYUGDIJKORHATAR = 65;
+
+    private LocalDate currentDate = LocalDate.now();
+    private int currentYear = currentDate.getYear();
 
     //konstruktorok
-    public Alkalmazott(String nev, int eletkor, int fizetes) {
+    public Alkalmazott(String nev, LocalDate szuletesiDatum, int fizetes) {
         this.nev = nev;
-        this.eletkor = eletkor;
+        this.szuletesiDatum = szuletesiDatum;
         this.fizetes = fizetes;
-    }
+    }    
 
-    public Alkalmazott(String nev, int eletkor) {
+    public Alkalmazott(String nev, LocalDate szuletesiDatum) {
         this.nev = nev;
-        this.eletkor = eletkor;
-        this.fizetes = 10 * this.eletkor;
+        this.szuletesiDatum = szuletesiDatum;
+        this.fizetes = this.szuletesiDatum.getYear();
     }
 
     public int evekNyugdijig() {
-        return nyugdijKorhatar - this.eletkor;
+        return NYUGDIJKORHATAR - this.eletkor;
     }
 
     @Override
@@ -43,8 +46,10 @@ public class Alkalmazott {
     }
 
     public static void setNyugdijkorhatar(int korhatar) {
-        nyugdijKorhatar = korhatar;
+        NYUGDIJKORHATAR = korhatar;
     }
+
+    
 
     
 }
