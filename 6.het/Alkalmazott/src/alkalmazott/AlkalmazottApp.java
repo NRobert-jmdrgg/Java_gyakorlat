@@ -22,18 +22,23 @@ public class AlkalmazottApp {
         
         
         String nev;
-        int eletkor;
-        int fizetes; 
+        int ev;
+        String honap;
+        int nap;
+        
         System.out.println("Add meg az alkalmazott nevet: ");
         nev = s.nextLine();
-        System.out.println("Add meg az eletkort: ");
-        eletkor = s.nextInt();
+        System.out.println("Add meg az evet: ");
+        ev = s.nextInt();
         s.nextLine();
-        System.out.println("Add meg a fizetest: ");
-        fizetes = s.nextInt();
+        System.out.println("Add meg a honapot: ");
+        honap = s.nextLine();
+        System.out.println("Add meg az napot: ");
+        nap = s.nextInt();
         s.nextLine();
+        
 
-        return new Alkalmazott(nev, eletkor, fizetes);
+        return new Alkalmazott(nev, ev, honap, nap);
         
     }
 
@@ -113,9 +118,6 @@ public class AlkalmazottApp {
         }
 
         alkalmazottakKiir(alkalmazottak);
-
-        System.out.println("Add meg az uj nyugdijkorhatart: ");
-        Alkalmazott.setNyugdijkorhatar(beolvas());
 
         alkalmazottakKiir(alkalmazottak);
 
