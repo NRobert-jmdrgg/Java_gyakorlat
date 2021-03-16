@@ -14,17 +14,53 @@ public class Alkalmazott {
     private LocalDate currentDate = LocalDate.now();
     private int currentYear = currentDate.getYear();
 
+    private static String[] monthNames = {
+        " ",
+        "január",
+        "február",
+        "március",
+        "április",
+        "május",
+        "junius",
+        "julius",
+        "augusztus",
+        "szeptember",
+        "oktober",
+        "november",
+        "december" 
+    };
+
+    public String convertMonthValue(int monthvalue) {
+        return monthNames[monthvalue];
+    }
+
+    public int convertMonthName(String monthname) {
+        for (int i = 1; i < monthNames.length; i++) {
+            if (monthNames[i].equalsIgnoreCase(monthname)) {
+                return i;
+            }
+        }
+        return 0;
+    }
+    
+
     //konstruktorok
-    public Alkalmazott(String nev, LocalDate szuletesiDatum, int fizetes) {
+    public Alkalmazott(String nev, int ev, int honap, int nap) {
         this.nev = nev;
-        this.szuletesiDatum = szuletesiDatum;
-        this.fizetes = fizetes;
+        this.szuletesiDatum = LocalDate.of(ev, honap, nap);
+        this.fizetes = (currentYear - this.szuletesiDatum.getYear()) * 10000;
     }    
 
-    public Alkalmazott(String nev, LocalDate szuletesiDatum) {
+    public Alkalmazott(String nev, int ev, String honap, int nap) {
         this.nev = nev;
-        this.szuletesiDatum = szuletesiDatum;
-        this.fizetes = (currentYear - this.szuletesiDatum.getYear()) * 10000;
+        int honapErtek;
+        if (convertMonthName(honap) == 0) {
+            honapErtek = 1;
+        } else {
+            honapErtek = convertMonthName(honap);
+        }
+        this.szuletesiDatum = LocalDate.of(ev, honapErtek, nap);
+        this.fizetes = currentYear - this.szuletesiDatum.getYear() * 10000;
     }
 
     public int evekNyugdijig() {
