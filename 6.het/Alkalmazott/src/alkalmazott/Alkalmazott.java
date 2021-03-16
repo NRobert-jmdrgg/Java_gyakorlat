@@ -1,9 +1,11 @@
 package alkalmazott;
 
+import java.time.LocalDate;
+
 public class Alkalmazott {
     //objektum adattagok
     private String nev;
-    private int eletkor;
+    private int szuletesiDatum;
     private int fizetes;
 
     //osztaly adattagok
