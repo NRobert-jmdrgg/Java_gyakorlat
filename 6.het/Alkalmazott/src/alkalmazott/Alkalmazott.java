@@ -50,9 +50,7 @@ public class Alkalmazott {
         }
     }
 
-    public static void setNyugdijkorhatar(int korhatar) {
-        NYUGDIJKORHATAR = korhatar;
-    }
+    
 
     
 
