@@ -11,8 +11,8 @@ public class Alkalmazott {
     //osztaly adattagok
     private static final int NYUGDIJKORHATAR = 65;
 
-    private LocalDate currentDate = LocalDate.now();
-    private int currentYear = currentDate.getYear();
+    private static LocalDate currentDate = LocalDate.now();
+    private static int currentYear = currentDate.getYear();
 
     private static String[] monthNames = {
         " ",
