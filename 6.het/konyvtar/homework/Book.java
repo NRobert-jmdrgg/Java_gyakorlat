@@ -5,15 +5,18 @@ import java.time.LocalDate;
 public class Book {
 	private String author;
 	private String title;
-	private int yearOfPublication;
+	private final int yearOfPublication;
 	private int price;
+	private int pageNumber;
 	
 	private static LocalDate currentDate = LocalDate.now();
+	private static String publisher = "Móra"; 
 
-	public Book(String author, String title, int yearOfPublication, int price) {
+
+	public Book(String author, String title, int price) {
 		this.author = author;
 		this.title = title;
-		this.yearOfPublication = yearOfPublication;
+		this.yearOfPublication = currentDate.getYear();
 		this.price = price;
 	}
 
