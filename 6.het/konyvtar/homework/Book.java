@@ -7,24 +7,26 @@ public class Book {
 	private String title;
 	private final int yearOfPublication;
 	private int price;
-	private int pageNumber;
+	private int numberOfPages;
 	
 	private static LocalDate currentDate = LocalDate.now();
 	private static String publisher = "Móra"; 
 
 
-	public Book(String author, String title, int price) {
+	public Book(String author, String title, int price, int numberOfPages) {
 		this.author = author;
 		this.title = title;
 		this.yearOfPublication = currentDate.getYear();
 		this.price = price;
+		this.numberOfPages = numberOfPages;
 	}
 
-	public Book(String author, String title) {
+	public Book(String author, String title, int numberOfPages) {
 		this.author = author;
 		this.title = title;
 		this.yearOfPublication = currentDate.getYear();
 		this.price = 2500;
+		this.numberOfPages = numberOfPages;
 	}
 	
 	public void increasePrice(int percentage) {
@@ -34,11 +36,11 @@ public class Book {
 	}
 	@Override
 	public String toString() {
-		return author + ": " + title + ", " + yearOfPublication + ". Price: " + price + " Ft";
+		return author + ": " + title + ", " + yearOfPublication + ". Price: " + price + " Ft" + "Number of pages: " + numberOfPages;
 	}
 
 	public String displayInfo() {
-		return author + ": " + title + ", " + yearOfPublication + ". Price: " + price + " Ft";
+		return author + ": " + title + ", " + yearOfPublication + ". Price: " + price + " Ft" + "Number of pages: " + numberOfPages;
 	}
 
 	public String getAuthor() {
