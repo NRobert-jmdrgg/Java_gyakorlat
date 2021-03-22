@@ -7,9 +7,7 @@ public class AlklamazottApp {
         Alkalmazott[] alkalmazottak = new Alkalmazott[5];
         
         kiirAlkalmazottak(alkalmazottak);
-        System.out.println(altagFizetes(alkalmazottak));
-        System.out.println(legnagyobbFizetes(alkalmazottak));
-        System.out.println(sjaOsszeg(alkalmazottak));
+        
     }
 
     
@@ -20,30 +18,5 @@ public class AlklamazottApp {
         }
     }
 
-    private static double altagFizetes(Alkalmazott[] alk) {
-        int sum = 0;
-        for (Alkalmazott alkalmazott : alk) {
-            sum += alkalmazott.getSalary();
-        }
-        return (double)sum / alk.length;
-    }
-
-    private static int sjaOsszeg(Alkalmazott[] alk) {
-        int sum = 0;
-        for (Alkalmazott alkalmazott : alk) {
-            sum += alkalmazott.getSJA();
-        }
-
-        return sum;
-    }
-
-    private static Alkalmazott legnagyobbFizetes(Alkalmazott[] a) {
-        Alkalmazott max = a[0];
-        for (int i = 1; i < a.length; i++) {
-            if (max.nagyobbE(a[i])) {
-                max = a[i];
-            }
-        }
-        return max;
-    }
+    
 }
