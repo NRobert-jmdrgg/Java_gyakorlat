@@ -35,7 +35,9 @@ public class Alkalmazott {
     }
     
     public boolean nagyobbE(Alkalmazott a) {
-        return (this.salary > a.salary);
+        return (this.salary < a.salary);
     }
+
+
 
 }

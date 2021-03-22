@@ -7,6 +7,8 @@ public class AlklamazottApp {
         Alkalmazott[] alkalmazottak = new Alkalmazott[5];
         feltolt(alkalmazottak);
         kiirAlkalmazottak(alkalmazottak);
+        System.out.println(altagFizetes(alkalmazottak));
+        System.out.println(legnagyobbFizetes(alkalmazottak));
     }
 
     public static void feltolt(Alkalmazott[] alk) {
@@ -27,5 +29,24 @@ public class AlklamazottApp {
             sum += alkalmazott.getSalary();
         }
         return (double)sum / alk.length;
+    }
+
+    public static int sjaOsszeg(Alkalmazott[] alk) {
+        int sum = 0;
+        for (Alkalmazott alkalmazott : alk) {
+            sum += alkalmazott.getSJA();
+        }
+
+        return sum;
+    }
+
+    public static Alkalmazott legnagyobbFizetes(Alkalmazott[] a) {
+        Alkalmazott max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (max.nagyobbE(a[i])) {
+                max = a[i];
+            }
+        }
+        return max;
     }
 }
