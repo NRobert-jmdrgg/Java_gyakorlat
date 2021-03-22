@@ -12,7 +12,11 @@ public class ProductApp {
 
         Product product2 = new Bread("Feher", 300, 10, 1);
 
-
+        System.out.println(product2);
+        System.out.println("nem lehet meghivni a " + "product2.getMennyiseg() - metodust");
+        Bread bread2 = new Bread("feher", 340, 10, 2);
+        
+        System.out.println(product2.arOsszehasonlit(bread2));
     }
 
     
