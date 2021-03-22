@@ -4,11 +4,10 @@ package alkalmazott;
  */
 public class AlklamazottApp {
     public static void main(String[] args) {
-        Alkalmazott a = new Alkalmazott();
-        a.name = "Pista";
-        a.salary = 100000;
-        System.out.println(a.toString());
+        Alkalmazott a = new Alkalmazott("Pista", 400000);
+        
+        System.out.println(a);
         a.increaseSalary(40);
-        System.out.println(a.toString());
+        System.out.println(a);
     }
 }
