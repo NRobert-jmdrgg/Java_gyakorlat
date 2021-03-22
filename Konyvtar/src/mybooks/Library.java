@@ -6,5 +6,4 @@ public class Library {
 		Book b = new Book("title", "author", 2000, 2500);
 		System.out.println(b);
 	}
-
 }
