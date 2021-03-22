@@ -23,7 +23,6 @@ public class MatrixApp {
 			for(int j = 0; j < mx[0].length; j++) 
 				if(mx[i][j] == key) return true;
 			
-		
 		return false;
 	}
 
