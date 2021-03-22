@@ -11,8 +11,8 @@ public class Product {
         this.afakulcs = afakulcs;
     }
 
-    public int bruttoAr() {
-        return this.ar * (afakulcs / 100);
+    public double bruttoAr() {
+        return (double)this.ar * (afakulcs / 100.0);
     }
 
     @Override
