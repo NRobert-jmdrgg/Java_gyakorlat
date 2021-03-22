@@ -1,11 +1,20 @@
 package mybooks;
 
+import java.time.LocalDate;
+
 public class Book {
 	private String title;
 	private String author;
 	private int    yearOfPublication;
 	private int    price;
 	
+	private static LocalDate currentDate = LocalDate.now();
+	private static int year = currentDate.getYear();
+	
+	public Book(String title, String author) {
+		this(title, author, year, 2500);
+	}
+
 	public Book(String title, String author, int yearOfPublication, int price) {
 		super();
 		this.title = title;
