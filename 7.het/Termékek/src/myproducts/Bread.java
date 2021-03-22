@@ -8,9 +8,13 @@ public class Bread extends Product {
         this.mennyiseg = mennyiseg;
     }
 
+    private double getEgysegar() {
+        return this.bruttoAr() / mennyiseg;
+    }
+
     @Override
     public String toString() {
-        return "Product [afakulcs=" + afakulcs + ", ar=" + ar + ", nev=" + nev + "egysegar: " + (this.bruttoAr() / mennyiseg) + "]";
+        return "Product [afakulcs=" + afakulcs + ", ar=" + ar + ", nev=" + nev + ", egysegar: " + this.getEgysegar() + "]";
     }
     
     public double getMennyiseg() {
@@ -18,6 +22,8 @@ public class Bread extends Product {
     }
 
     public static boolean egysegarOsszehasonlit(Bread a, Bread b) {
-        
+        return (a.getEgysegar() > b.getEgysegar());
     }
+
+
 }
