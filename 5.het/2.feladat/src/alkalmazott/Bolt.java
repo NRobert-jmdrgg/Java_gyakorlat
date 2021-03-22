@@ -7,11 +7,22 @@ public class Bolt {
     public Bolt(int letszam) {
         this.letszam = letszam;
         this.boltiAlkalmazottak = new Alkalmazott[letszam];
+        feltolt();
     }
 
-    private static void feltolt(Alkalmazott[] alk) {
-        for (int i = 0; i < alk.length; i++) {
-            alk[i] = new Alkalmazott("bela " + (i + 1) , i + 10000);
+    private void feltolt() {
+        for (int i = 0; i < boltiAlkalmazottak.length; i++) {
+            boltiAlkalmazottak[i] = new Alkalmazott("bela " + (i + 1) , i + 10000);
         }
     }
+
+    public int getLetszam() {
+        return letszam;
+    }
+
+    public Alkalmazott[] getBoltiAlkalmazottak() {
+        return boltiAlkalmazottak;
+    }
+
+
 }
