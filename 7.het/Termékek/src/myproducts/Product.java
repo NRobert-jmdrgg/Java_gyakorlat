@@ -1,9 +1,9 @@
 package myproducts;
 
 public class Product {
-    private String nev;
-    private int ar;
-    private int afakulcs;
+    protected String nev;
+    protected int ar;
+    protected int afakulcs;
 
     public Product(String nev, int ar, int afakulcs) {
         this.nev = nev;
