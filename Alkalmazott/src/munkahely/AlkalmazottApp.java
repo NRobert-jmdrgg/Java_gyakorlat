@@ -23,8 +23,8 @@ public class AlkalmazottApp {
 	public static void main(String[] args) {
 		Alkalmazott[] dolgozok = new Alkalmazott[5];
 		
-		for (Alkalmazott a : dolgozok) {
-			a = beolvas();
+		for (int i = 0; i < dolgozok.length; i++) {
+			dolgozok[i] = beolvas();
 		}
 		s.close();
 		
