@@ -29,5 +29,13 @@ public class Alkalmazott {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public static double getSjakulcs() {
+        return SJAKULCS;
+    }
     
+    public boolean nagyobbE(Alkalmazott a) {
+        return (this.salary > a.salary);
+    }
+
 }

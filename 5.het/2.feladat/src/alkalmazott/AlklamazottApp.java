@@ -5,7 +5,7 @@ package alkalmazott;
 public class AlklamazottApp {
     public static void main(String[] args) {
         Alkalmazott a = new Alkalmazott("Pista", 400000);
-        
+        a.setSalary(99999999);
         System.out.println(a);
         a.increaseSalary(40);
         System.out.println(a);
