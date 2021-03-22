@@ -32,8 +32,6 @@ public class AlkalmazottApp {
 		System.out.println(numberOfSalariesInInterval(dolgozok, 40000, 500000));
 		System.out.println(avgSalary(dolgozok));
 		System.out.println(sumOfTaxes(dolgozok));
-
-		
 	}
 	
 	private static Alkalmazott largestSalary(Alkalmazott[] dolgozok) {
