@@ -55,7 +55,7 @@ public class HanglemezApp {
 		name = s.nextLine();
 		
 		for (Hanglemez hanglemez : h) {
-			if (hanglemez.isAuthor(name) {
+			if (hanglemez.isAuthor(name)) {
 				System.out.println(hanglemez);
 			}
 		}
@@ -66,7 +66,8 @@ public class HanglemezApp {
 		Hanglemez[] h = new Hanglemez[meret];
 		hanglemezekBeolvas(h);
 		longestRecord(h);
-		
+		beolvasottRekordjai(h);
+		s.close();
 	}
 
 }
