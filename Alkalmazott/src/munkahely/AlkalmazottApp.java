@@ -8,5 +8,6 @@ public class AlkalmazottApp {
 		a.increaseSalary(2000000);
 		System.out.println(a);
 	}
-
+	
+	
 }
