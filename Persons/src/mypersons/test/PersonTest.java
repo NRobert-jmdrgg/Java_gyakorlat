@@ -16,12 +16,26 @@ public class PersonTest {
 		age = scan.nextInt();
 		scan.nextLine();
 		
-		return new Person(name, age);
+		if (age < 18) {
+			String school;
+			System.out.println("Iskola: ");
+			school = scan.nextLine();
+			return new Kid(name, age, school);
+		} else {
+			String workplc;
+			System.out.println("MunkaHely: ");
+			workplc = scan.nextLine();
+			return new Adult(name, age, workplc);
+		}
 	}
 	
 	public static void main(String[] args) {
 		Person p1 = readPerson();
 		Person p2 = readPerson();
+		
+		System.out.println(p1 instanceof Kid);
+		System.out.println(p2 instanceof Adult);
+		
 		
 	}
 
