@@ -12,6 +12,14 @@ public class ProductApp {
 		System.out.println(p);
 		System.out.println(p.arOsszehasonlit(a));
 		System.out.println(a.arOsszehasonlit(p));
+		
+		Product p2 = a;
+		
+		System.out.println(p2);
+		
+		Bread b2 = new Bread("barna", 400, 11, 0.12);
+		
+		System.out.println(Bread.kenyerHasonlit((Bread)p2, b2));
 	}
 
 }
