@@ -62,6 +62,15 @@ public class BookStyleApp {
 		}
 	}
 	
+	private static void scifiAtlagar(BookStyle[] bs) {
+		double sum = 0;
+		for (BookStyle bookStyle : bs) {
+			if (bookStyle.getStyle().toLowerCase().equals("scifi")) {
+				
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		int n = readInt();
 		

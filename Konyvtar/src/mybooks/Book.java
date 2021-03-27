@@ -33,6 +33,10 @@ public class Book {
 				+ price + "]";
 	}
 	
+	public int getPrice() {
+		return price;
+	}
+	
 	
 	
 	
