@@ -55,6 +55,9 @@ public class AlkalmazottApp {
 		Alkalmazott.setRetirementAge(50);
 		alkalmazottKiir(a);
 		
+		otEvNyugdijigKiir(a);
+		
+		//TODO fejezd be xd
 		
 	}
 }
