@@ -22,6 +22,18 @@ public class Product {
 				+ getBruttoAr() + "]";
 	}
 	
+	public void nettoNovelSzazalekkal(int sz) {
+		this.nettoAr += (this.nettoAr * (sz / 100));
+	}
 	
+	public int arOsszehasonlit(Product a) {
+		if (this.getBruttoAr() > a.getBruttoAr()) {
+			return 1;
+		} else if (this.getBruttoAr() < a.getBruttoAr()) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
 	
 }
