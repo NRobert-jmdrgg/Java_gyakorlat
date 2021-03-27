@@ -1,6 +1,8 @@
 package styles.alpackage;
 
 import styles.BookStyle;
+
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class BookStyleApp {
@@ -43,6 +45,17 @@ public class BookStyleApp {
 		return new BookStyle(title, author, year, price, style);
 	}
 	
+	private static int kulonfeleKonyvek(BookStyle[] bs) {
+		HashSet<String> stilusHalmaz = new HashSet<>();
+		//halmazba nem lehet ket egyforma elem
+		for (BookStyle b : bs) {
+			stilusHalmaz.add(b.getStyle());
+		}
+		return stilusHalmaz.size();
+	}
+	
+	
+	
 	public static void main(String[] args) {
 		int n = readInt();
 		
@@ -52,7 +65,7 @@ public class BookStyleApp {
 			bs[i] = readBookStyle();
 		}
 		
-		
+		System.out.println(kulonfeleKonyvek(bs));
 	}
 
 }
