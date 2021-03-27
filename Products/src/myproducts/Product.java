@@ -12,7 +12,7 @@ public class Product {
 	}
 	
 	public double getBruttoAr() {
-		return this.nettoAr * (1 + this.afaKulcs/ 100);
+		return this.nettoAr * (1 + this.afaKulcs/ 100.0);
 	}
 
 	@Override
