@@ -11,7 +11,7 @@ public class Bread extends Product {
 
 	@Override
 	public String toString() {
-		return "Bread [mennyiseg=" + mennyiseg + ", name=" + name + ", nettoAr=" + nettoAr + ", afaKulcs=" + afaKulcs
+		return "Bread [mennyiseg=" + mennyiseg + ", name=" + name + ", nettoAr=" + nettoAr + ", afaKulcs=" + afaKulcs + " brutto ar: " + this.getBruttoAr() 
 				+ " egysegar: "+ this.getBruttoAr() / mennyiseg + "]";
 	}
 

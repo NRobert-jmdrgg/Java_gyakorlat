@@ -10,6 +10,8 @@ public class ProductApp {
 		
 		System.out.println(a);
 		System.out.println(p);
+		System.out.println(p.arOsszehasonlit(a));
+		System.out.println(a.arOsszehasonlit(p));
 	}
 
 }
