@@ -50,6 +50,21 @@ public class EmployeeTest {
 		return a;
 	}
 	
+	private static void sortByAge(Person[] a) {
+		//beszuro
+		int j;
+		Person key;
+		for (int i = 1; i < a.length; i++) {
+			key = a[i];
+			j = i - 1;
+			while (j >= 0 && a[j].getAge() > key.getAge()) {
+				a[j + 1] = a[j];
+				j--;
+			}
+			a[j + 1] = key;
+		}
+	}
+	
 	public static void main(String[] args) {
 		int n = readInt();
 		
@@ -62,6 +77,8 @@ public class EmployeeTest {
 		for (Person person : people) {
 			System.out.println(person);
 		}
+		
+		scan.close();
 	}
 
 }
