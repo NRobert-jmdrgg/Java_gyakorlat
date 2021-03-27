@@ -8,10 +8,14 @@ public class Adult extends Person {
 		this.workplace = workplace;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Adult [workplace=" + workplace + ", name=" + name + ", age=" + age + "]";
+		return "Adult [name=" + name + ", age=" + age + "]";
 	}
+
+
 
 	public String getWorkplace() {
 		return workplace;
