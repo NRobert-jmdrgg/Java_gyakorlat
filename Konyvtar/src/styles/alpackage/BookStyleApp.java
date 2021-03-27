@@ -54,7 +54,13 @@ public class BookStyleApp {
 		return stilusHalmaz.size();
 	}
 	
-	
+	private static void printScifi(BookStyle[] bs) {
+		for (BookStyle bookStyle : bs) {
+			if (bookStyle.getStyle().toLowerCase().equals("scifi")) {
+				System.out.println(bookStyle);
+			}
+		}
+	}
 	
 	public static void main(String[] args) {
 		int n = readInt();
