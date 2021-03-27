@@ -3,10 +3,10 @@ package mybooks;
 import java.time.LocalDate;
 
 public class Book {
-	private String title;
-	private String author;
-	private int    yearOfPublication;
-	private int    price;
+	protected String title;
+	protected String author;
+	protected int    yearOfPublication;
+	protected int    price;
 	
 	private static LocalDate currentDate = LocalDate.now();
 	private static int year = currentDate.getYear();
