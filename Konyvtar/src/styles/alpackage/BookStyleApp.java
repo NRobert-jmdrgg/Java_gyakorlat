@@ -56,19 +56,20 @@ public class BookStyleApp {
 	
 	private static void printScifi(BookStyle[] bs) {
 		for (BookStyle bookStyle : bs) {
-			if (bookStyle.getStyle().toLowerCase().equals("scifi")) {
+			if (bookStyle.getStyle().equalsIgnoreCase("scifi")) {
 				System.out.println(bookStyle);
 			}
 		}
 	}
 	
-	private static void scifiAtlagar(BookStyle[] bs) {
+	private static double scifiAtlagar(BookStyle[] bs) {
 		double sum = 0;
 		for (BookStyle bookStyle : bs) {
-			if (bookStyle.getStyle().toLowerCase().equals("scifi")) {
-				
+			if (bookStyle.getStyle().equalsIgnoreCase("scifi")) {
+				sum += bookStyle.getPrice();
 			}
 		}
+		return sum / bs.length;
 	}
 	
 	public static void main(String[] args) {
@@ -81,6 +82,9 @@ public class BookStyleApp {
 		}
 		
 		System.out.println(kulonfeleKonyvek(bs));
+		printScifi(bs);
+		System.out.println(scifiAtlagar(bs));
+		
 	}
 
 }
