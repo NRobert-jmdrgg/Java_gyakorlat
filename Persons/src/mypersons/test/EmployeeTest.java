@@ -74,6 +74,8 @@ public class EmployeeTest {
 			people[i] = readPerson();
 		}
 		
+		sortByAge(people);
+		
 		for (Person person : people) {
 			System.out.println(person);
 		}
