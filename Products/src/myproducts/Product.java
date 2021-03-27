@@ -1,12 +1,11 @@
 package myproducts;
 
 public class Product {
-	private String name;
-	private int nettoAr;
-	private int afaKulcs;
+	protected String name;
+	protected int nettoAr;
+	protected int afaKulcs;
 	
 	public Product(String name, int nettoAr, int afaKulcs) {
-		super();
 		this.name = name;
 		this.nettoAr = nettoAr;
 		this.afaKulcs = afaKulcs;
