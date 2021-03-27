@@ -15,7 +15,7 @@ public class Employee extends Adult {
 
 	@Override
 	public String toString() {
-		return "Employee [salary=" + salary + ", name=" + name + ", age=" + age + ", getSalary()=" + getSalary()
+		return "Employee [salary=" + salary + ", name=" + name + ", age=" + age 
 				+ ", getWorkplace()=" + getWorkplace() + "]";
 	}
 	
