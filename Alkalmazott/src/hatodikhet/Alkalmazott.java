@@ -32,7 +32,7 @@ public class Alkalmazott {
 	}
 	
 	public Alkalmazott(String name, int year, String month, int day) {
-		this.name = name;Y
+		this.name = name;
 		int monthValue;
 		if (convertMonthName(month) == 0) {
 			monthValue = 1;

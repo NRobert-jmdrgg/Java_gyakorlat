@@ -19,15 +19,21 @@ public class AlkalmazottApp {
 	
 	private static Alkalmazott alkalmazottBeolvas() {
 		String name;
-		int age;
+		int ev;
+		String ho;
+		int nap;
 		
 		System.out.println("Nev: ");
 		name = s.nextLine();
-		System.out.println("Age: ");
-		age = s.nextInt();
+		System.out.println("Sz.Ev: ");
+		ev = s.nextInt();
 		s.nextLine();
-		
-		return new Alkalmazott(name, age);
+		System.out.println("sz.ho: ");
+		ho = s.nextLine();
+		System.out.println("sz.nap: ");
+		nap = s.nextInt();
+		s.nextLine();
+		return new Alkalmazott(name, nap, ev, nap);
 	}
 	
 	private static void alkalmazottKiir(Alkalmazott[] a) {
@@ -84,7 +90,7 @@ public class AlkalmazottApp {
 		}
 		
 		alkalmazottKiir(a);
-		Alkalmazott.setRetirementAge(50);
+		
 		alkalmazottKiir(a);
 		
 		otEvNyugdijigKiir(a);
