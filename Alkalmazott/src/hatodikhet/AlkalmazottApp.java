@@ -44,6 +44,38 @@ public class AlkalmazottApp {
 		}
 	}
 	
+	private static void printAtlagnalNagyobbFizetes(Alkalmazott[] a) {
+		double atlag = 0;
+		for (Alkalmazott alkalmazott : a) {
+			atlag += alkalmazott.getSalary();
+		}
+		atlag /= a.length;
+		
+		for (Alkalmazott alkalmazott : a) {
+			if (alkalmazott.getSalary() > atlag) {
+				System.out.println(alkalmazott);
+			}
+		}
+		
+	}
+	
+	private static void rendezNyugdijSzerint(Alkalmazott[] a) {
+		int minindex;
+		for (int i = 0; i < a.length; i++) {
+			minindex = i;
+			for (int j = i + 1; j < a.length; j++) {
+				if (a[j].yearsUntilRetirement() < a[minindex].yearsUntilRetirement()) {
+					minindex = j;
+				}
+			}
+			if (minindex != i) {
+				Alkalmazott temp = a[i];
+				a[i] = a[minindex];
+				a[minindex] = temp;
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		int n = beolvas();
 		Alkalmazott[] a = new Alkalmazott[n];
@@ -57,7 +89,7 @@ public class AlkalmazottApp {
 		
 		otEvNyugdijigKiir(a);
 		
-		//TODO fejezd be xd
+		
 		
 	}
 }

@@ -28,6 +28,10 @@ public class Alkalmazott {
 		return retirementAge - this.age;
 	}
 	
+	public int getSalary() {
+		return salary;
+	}
+
 	public static Alkalmazott isCloserToRetirement(Alkalmazott a, Alkalmazott b) {
 		if (a.yearsUntilRetirement() <= b.yearsUntilRetirement()) {
 			return b;
