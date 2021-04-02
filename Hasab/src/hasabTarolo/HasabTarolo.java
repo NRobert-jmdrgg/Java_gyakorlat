@@ -4,10 +4,10 @@ import testek.*;
 
 public class HasabTarolo {
 	private Hasab[] hasabTomb;
-	private int maxElem;
+	
 	
 	HasabTarolo(int maxElem) {
-		this.maxElem = maxElem;
+	
 		this.hasabTomb = new Hasab[maxElem];
 	}
 	
