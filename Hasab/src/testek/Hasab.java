@@ -1,10 +1,9 @@
 package testek;
 
 abstract class Hasab {
-	private int magassag;
+	protected int magassag;
 
 	public Hasab(int magassag) {
-		super();
 		this.magassag = magassag;
 	}
 
@@ -12,6 +11,13 @@ abstract class Hasab {
 		return magassag;
 	}
 	
-	abstract double alapterulet();
+	abstract public double getAlapterulet();
 	
+	public double getTerfogat() {
+		return this.getAlapterulet() * this.magassag;
+	}
+	
+	public boolean osszehasonlito(Hasab a) {
+		return (this.getAlapterulet() > a.getAlapterulet()); 
+	}
 }
