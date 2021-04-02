@@ -7,8 +7,8 @@ import myproducts.Colorable;
 public class ColoredPoint extends Point implements Colorable {
 	private Color color;
 
-	public ColoredPoint(int x, int y, Color color) {
-		super(x, y);
+	public ColoredPoint(Color color) {
+		super(0, 0);
 		this.color = color;
 	}
 
