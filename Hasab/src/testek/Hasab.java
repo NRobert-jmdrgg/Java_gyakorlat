@@ -1,6 +1,6 @@
 package testek;
 
-abstract class Hasab {
+public abstract class Hasab {
 	protected int magassag;
 
 	public Hasab(int magassag) {
