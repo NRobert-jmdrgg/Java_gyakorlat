@@ -1,6 +1,7 @@
 package kozosseg;
 
 import java.util.Arrays;
+import java.lang.StringBuilder;
 
 class Lakohaz extends Epulet {
 	private int lakokSzama;
@@ -33,10 +34,18 @@ class Lakohaz extends Epulet {
 		return  emberek;
 	}
 
+	
+	
 	@Override
 	public String toString() {
-		return super.toString() + " Lakohaz [lakokSzama=" + lakokSzama + ", jelenlegiLakokSzama=" + jelenlegiLakokSzama
-				+ ", fenntartasiKoltseg=" + fenntartasiKoltseg + ", koltseg=" + koltseg + "]";
+		StringBuilder eredmeny = new StringBuilder(super.toString() + " Lakohaz [lakokSzama=" + lakokSzama + ", jelenlegiLakokSzama=" + jelenlegiLakokSzama
+				+ ", fenntartasiKoltseg=" + fenntartasiKoltseg + "koltseg="
+				+ koltseg + "]" + System.lineSeparator());
+		
+		for (Ember ember : lakok) {
+			eredmeny.append(ember.toString() + System.lineSeparator());
+		}
+		return eredmeny.toString();
 	}
 
 	public void bekoltoz(Ember e) {

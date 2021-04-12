@@ -11,10 +11,9 @@ public class Test {
 			Ember e = new Ember("EmberNev " + i, true);
 			l.bekoltoz(e);
 		}
-		l.test();
-		Ember e = new Ember("EmberNev " + 3, true);
-		l.kikoltozes(e);
-		l.test();
+		
+		System.out.println(l);
+		
 	}
 
 }
