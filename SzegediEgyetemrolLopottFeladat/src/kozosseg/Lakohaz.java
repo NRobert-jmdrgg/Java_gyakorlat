@@ -58,19 +58,42 @@ class Lakohaz extends Epulet {
 	}
 	
 	public void kikoltozes(Ember e) {
-		int i = 0;
-		while (i < lakok.length) {
-			if (lakok[i] == e) break;
-			i++;
+		for (int i = 0; i < lakok.length; i++) {
+			if (lakok[i] == e) {
+				for (int j = i; j < lakok.length - 1; j++) {
+					lakok[j] = lakok[j + 1];
+				}
+				lakok[lakok.length - 1] = null;
+				return;
+			}
 		}
-		while(i < lakok.length - 1) {
-			lakok[i] = lakok[i + 1];
-			i++;
-		}
+		System.err.println("o nem lakik itt");
+		return;
 	}
 	
 	public void kilakoltatas() {
 		Arrays.fill(lakok, null);
+	}
+	
+	public boolean dijBefizetes() {
+		int m = fenntartasiKoltseg;
+		for (Ember ember : lakok) {
+			if (ember.getPenz() >= m) {
+				ember.koltekezik(m);
+				return true;
+			}
+			
+			m -= ember.getPenz();
+			ember.koltekezik(ember.getPenz());
+		}
+		kilakoltatas();
+		return false;
+	}
+	
+	@Override
+	public void osszedol() {
+		kilakoltatas();
+		super.osszedol();
 	}
 	
 }

@@ -13,7 +13,9 @@ public class Test {
 		}
 		
 		System.out.println(l);
-		
+		Ember e = new Ember("EmberNev 1", true);
+		l.kikoltozes(e);
+		System.out.println(l);
 	}
 
 }
