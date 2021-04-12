@@ -7,10 +7,10 @@ public class MyColor extends Color {
 		super(color.getRed(), color.getGreen(), color.getBlue());
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		//TODO else if ág az összes színnek a világon.
-	}
+	}*/
 	
 	
 }

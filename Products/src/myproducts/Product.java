@@ -1,6 +1,6 @@
 package myproducts;
 
-public class Product {
+class Product {
 	protected String name;
 	protected int nettoAr;
 	protected int afaKulcs;
@@ -14,6 +14,9 @@ public class Product {
 	public double getBruttoAr() {
 		return this.nettoAr * (1 + this.afaKulcs/ 100.0);
 	}
+	
+	
+	
 
 	@Override
 	public String toString() {
